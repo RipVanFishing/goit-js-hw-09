@@ -16,8 +16,3 @@ img {
   display: block;
   max-width: 100%;
 }
-
-.js_disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
