@@ -8,7 +8,7 @@ const refs = {
     body: document.querySelector('body')
 }
 
-let colorId = null;
+let colorId;
 
 refs.startBtn.addEventListener("click", onClickStartBtn);
 refs.stopBtn.addEventListener("click", onClickStopBtn);
