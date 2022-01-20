@@ -3,6 +3,18 @@ import { Notify } from 'notiflix';
 const formRef = document.querySelector('.form') 
 formRef.addEventListener('submit', onFormSubmit);
 
+function createPromise(position, delay) {
+  const shouldResolve = Math.random() > 0.3;
+  let promiseValue = { position, delay };
+
+  return new Promise((resolve, reject) => {
+    if (shouldResolve) {
+      resolve(promiseValue);
+    }
+    reject(promiseValue);
+  });
+}
+
 function onFormSubmit(event) {
   event.preventDefault();
 
@@ -26,14 +38,3 @@ function onFormSubmit(event) {
   }
 }
 
-function createPromise(position, delay) {
-  const shouldResolve = Math.random() > 0.3;
-  let promiseValue = { position, delay };
-
-  return new Promise((resolve, reject) => {
-    if (shouldResolve) {
-      resolve(promiseValue);
-    }
-    reject(promiseValue);
-  });
-}
